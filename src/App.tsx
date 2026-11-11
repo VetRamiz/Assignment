@@ -2,7 +2,7 @@
 import React, { useState, useMemo } from 'react';
 import {
   Activity, Droplets, Map, ShieldAlert, Search, AlertTriangle,
-  ChevronRight, ChevronLeft, Download, Beef, Loader2, Network
+  ChevronRight, ChevronLeft, Download, Beef, Loader2, Network, Menu, X
 } from 'lucide-react';
 import {
   AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip as RechartsTooltip, ResponsiveContainer,
@@ -74,16 +74,16 @@ const d = (stat: string, label: string, desc: string) => ({ stat, label, desc })
 
 const slides: any[] = [
   { type: 'title', category: 'Overview' },
-  { type: 'header', category: 'Overview', title: 'The Global Burden', subtitle: 'Analyzing the 2021-2026 Cholera Upsurge.', Icon: Activity },
-  { type: 'data', category: 'Global Data', title: 'Global Cholera Snapshot (2026)',
+  { type: 'header', category: 'Overview', title: 'The Global Burden', subtitle: 'Analyzing the 2021-2025 Cholera Upsurge.', Icon: Activity },
+  { type: 'data', category: 'Global Data', title: 'Global Cholera Snapshot (2025)',
     alert: 'CFR above 1% signals people are not reaching treatment in time.',
     content: [
       d('451,499', 'Reported Cases', 'In 47 countries, up from 35 countries in 2021.'),
-      d('7,870', 'Reported Deaths', 'Deaths rose every year from 2022 to 2026.'),
+      d('7,870', 'Reported Deaths', 'Deaths rose every year from 2022 to 2025.'),
       d('1.3M+', 'Estimated Cases', 'Reported figures understate true burden.'),
       d('2.2%', 'African Region CFR', 'Far above the WHO target (<1%).')] },
-  { type: 'chart', chart: 'cholera', category: 'Global Data', title: 'Cholera Mortality Surge (2021-2026)',
-    description: 'Deaths rose ~43% from 2024 to 2026 even though reported cases fell.' },
+  { type: 'chart', chart: 'cholera', category: 'Global Data', title: 'Cholera Mortality Surge (2021-2025)',
+    description: 'Deaths rose ~43% from 2024 to 2025 even though reported cases fell.' },
 
   // One Health
   { type: 'header', category: 'One Health', title: 'One Health Interface', subtitle: 'Humans, livestock and shared water sources: one transmission system.', Icon: Network },
@@ -116,7 +116,7 @@ const slides: any[] = [
       d('Biosecurity', 'Control Lever', 'Trough cleaning, separate calf water, fenced ponds and drainage.')] },
 
   // Pakistan
-  { type: 'header', category: 'Pakistan', title: 'Pakistan Focus (2024-2026)', subtitle: 'Post-flood contagion, XDR Typhoid, and the Punjab/Sindh agricultural impact.', Icon: Map },
+  { type: 'header', category: 'Pakistan', title: 'Pakistan Focus (2024-2025)', subtitle: 'Post-flood contagion, XDR Typhoid, and the Punjab/Sindh agricultural impact.', Icon: Map },
   { type: 'data', category: 'Pakistan', title: 'Pakistan Baseline & Post-Flood Reality',
     alert: 'PCRWR data indicates less than half the country has access to uncontaminated water sources.',
     content: [
@@ -264,10 +264,10 @@ const TitleSlide = () => {
     setBusy(false);
   };
   return (
-    <div className="flex flex-col items-center justify-center h-full px-8 text-center">
-      <div className="p-6 mb-6 text-blue-700 bg-blue-100 rounded-full"><Droplets size={64} /></div>
-      <h1 className="mb-6 text-5xl font-bold text-slate-800">Epidemiology of Waterborne Diseases</h1>
-      <h2 className="mb-8 text-2xl text-slate-600">Rameez Sarwar, Faiz Fareed, M Usama, Uswa Maryam, Aqsa Naz</h2>
+    <div className="flex flex-col items-center justify-center h-full px-2 py-4 overflow-y-auto text-center md:px-8">
+      <div className="p-4 mb-4 text-blue-700 bg-blue-100 rounded-full md:p-6 md:mb-6"><Droplets className="w-10 h-10 md:w-16 md:h-16" /></div>
+      <h1 className="mb-4 text-3xl font-bold md:mb-6 md:text-5xl text-slate-800">Epidemiology of Waterborne Diseases</h1>
+      <h2 className="mb-6 text-lg md:mb-8 md:text-2xl text-slate-600">Global Burden, Zoonotic Spillovers, and the Pakistan Post-Flood Reality</h2>
       <span className="px-4 py-2 text-sm font-medium rounded-full bg-slate-100 text-slate-600">Human & Veterinary Overview</span>
       <button onClick={run} disabled={busy}
         className="inline-flex items-center gap-2 px-6 py-3 mt-8 text-white transition-colors bg-blue-600 rounded-lg hover:bg-blue-700 disabled:opacity-60">
@@ -280,47 +280,47 @@ const TitleSlide = () => {
 };
 
 const SectionHeader = ({ title, subtitle, Icon }: any) => (
-  <div className="flex flex-col justify-center h-full pl-8 border-l-8 border-blue-600">
+  <div className="flex flex-col justify-center h-full pl-4 overflow-y-auto border-l-4 md:pl-8 md:border-l-8 border-blue-600">
     {Icon && <Icon size={48} className="mb-4 text-blue-600" />}
-    <h2 className="mb-4 text-4xl font-bold text-slate-800">{title}</h2>
-    <p className="max-w-2xl text-xl text-slate-600">{subtitle}</p>
+    <h2 className="mb-4 text-2xl font-bold md:text-4xl text-slate-800">{title}</h2>
+    <p className="max-w-2xl text-base md:text-xl text-slate-600">{subtitle}</p>
   </div>
 );
 
 const DataCardSlide = ({ title, content, alert }: any) => (
-  <div className="flex flex-col h-full">
-    <h2 className="pb-4 mb-8 text-3xl font-bold border-b text-slate-800">{title}</h2>
-    <div className="grid flex-grow grid-cols-2 gap-8">
+  <div className="flex flex-col h-full overflow-y-auto">
+    <h2 className="pb-3 mb-4 text-2xl font-bold border-b md:pb-4 md:mb-8 md:text-3xl text-slate-800">{title}</h2>
+    <div className="grid grid-cols-1 gap-3 md:flex-grow md:grid-cols-2 md:gap-8">
       {content.map((item: any, i: number) => (
-        <div key={i} className="flex flex-col justify-center p-6 bg-white border shadow-sm rounded-xl">
-          <div className="mb-2 text-3xl font-bold text-blue-600">{item.stat}</div>
-          <div className="mb-2 text-xl font-semibold text-slate-700">{item.label}</div>
-          <p className="text-slate-500">{item.desc}</p>
+        <div key={i} className="flex flex-col justify-center p-4 bg-white border shadow-sm md:p-6 rounded-xl">
+          <div className="mb-1 text-2xl md:text-3xl font-bold text-blue-600">{item.stat}</div>
+          <div className="mb-1 text-lg font-semibold md:text-xl text-slate-700">{item.label}</div>
+          <p className="text-sm md:text-base text-slate-500">{item.desc}</p>
         </div>
       ))}
     </div>
     {alert && (
-      <div className="flex items-start gap-4 p-4 mt-8 border-l-4 border-red-500 rounded-r-lg bg-red-50">
+      <div className="flex items-start gap-4 p-3 mt-4 md:p-4 md:mt-8 border-l-4 border-red-500 rounded-r-lg bg-red-50">
         <AlertTriangle className="text-red-500 shrink-0" />
-        <p className="font-medium text-red-800">{alert}</p>
+        <p className="text-sm font-medium text-red-800 md:text-base">{alert}</p>
       </div>
     )}
   </div>
 );
 
 const Frame = ({ title, description, children }: any) => (
-  <div className="flex flex-col h-full">
-    <div className="mb-6">
-      <h2 className="mb-2 text-3xl font-bold text-slate-800">{title}</h2>
-      {description && <p className="text-lg text-slate-600">{description}</p>}
+  <div className="flex flex-col h-full overflow-y-auto">
+    <div className="mb-3 md:mb-6">
+      <h2 className="mb-1 text-2xl font-bold md:mb-2 md:text-3xl text-slate-800">{title}</h2>
+      {description && <p className="text-sm md:text-lg text-slate-600">{description}</p>}
     </div>
-    <div className="flex flex-col flex-grow min-h-0 p-6 overflow-hidden bg-white border shadow-sm rounded-xl">{children}</div>
+    <div className="flex flex-col flex-grow p-3 bg-white border shadow-sm min-h-[360px] md:min-h-0 md:p-6 md:overflow-hidden rounded-xl">{children}</div>
   </div>
 );
 
 const CholeraChart = () => (
   <ResponsiveContainer width="100%" height="100%">
-    <AreaChart data={globalCholeraData} margin={{ top: 20, right: 30, left: 20, bottom: 20 }}>
+    <AreaChart data={globalCholeraData} margin={{ top: 20, right: 10, left: 0, bottom: 20 }}>
       <CartesianGrid strokeDasharray="3 3" vertical={false} />
       <XAxis dataKey="year" />
       <YAxis yAxisId="left" stroke="#3b82f6" label={{ value: 'Cases', angle: -90, position: 'insideLeft' }} />
@@ -334,10 +334,10 @@ const CholeraChart = () => (
 
 const PakFloodChart = () => (
   <ResponsiveContainer width="100%" height="100%">
-    <BarChart data={pakFloodDiseaseData} layout="vertical" margin={{ top: 20, right: 30, left: 80, bottom: 5 }}>
+    <BarChart data={pakFloodDiseaseData} layout="vertical" margin={{ top: 20, right: 20, left: 0, bottom: 5 }}>
       <CartesianGrid strokeDasharray="3 3" horizontal vertical={false} />
       <XAxis type="number" unit="%" />
-      <YAxis dataKey="disease" type="category" width={100} />
+      <YAxis dataKey="disease" type="category" width={95} tick={{ fontSize: 12 }} />
       <RechartsTooltip />
       <Bar dataKey="prevalence" name="Prevalence (%)" fill="#0369a1" radius={[0, 4, 4, 0]} />
     </BarChart>
@@ -352,9 +352,9 @@ const BubbleSlide = ({ title, description }: any) => {
       <div className="flex flex-wrap gap-2 mb-3">
         {DOMAINS.map(dm => <Chip key={dm} active={active.includes(dm)} color={DOMAIN_COLOR[dm]} onClick={() => toggle(dm)}>{dm}</Chip>)}
       </div>
-      <div className="flex-grow min-h-0">
+      <div className="flex-grow min-h-[300px]">
         <ResponsiveContainer width="100%" height="100%">
-          <ScatterChart margin={{ top: 10, right: 30, bottom: 30, left: 20 }}>
+          <ScatterChart margin={{ top: 10, right: 15, bottom: 30, left: 0 }}>
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis type="number" dataKey="spreadRate" name="Spread Rate" domain={[40, 100]} label={{ value: 'Transmission Speed (index)', position: 'bottom', offset: 0 }} />
             <YAxis type="number" dataKey="severity" name="Severity" domain={[0, 100]} label={{ value: 'Clinical Severity (index)', angle: -90, position: 'insideLeft' }} />
@@ -396,7 +396,7 @@ const ExplorerSlide = ({ title, description }: any) => {
         ))}
       </div>
       <div className="flex-grow overflow-auto">
-        <table className="w-full text-sm text-left">
+        <table className="w-full min-w-[760px] text-sm text-left">
           <thead className="sticky top-0 border-b bg-slate-50">
             <tr>{['Pathogen', 'Domain', 'Hosts', 'Route', 'Impact', 'Control'].map(h => <th key={h} className="p-3 font-semibold text-slate-600">{h}</th>)}</tr>
           </thead>
@@ -424,21 +424,21 @@ const ReferencesSlide = () => {
   const list = referencesDB.filter(r => (r.title + r.type).toLowerCase().includes(q.toLowerCase()));
   return (
     <div className="flex flex-col h-full">
-      <h2 className="mb-6 text-3xl font-bold text-slate-800">Interactive Reference Database</h2>
+      <h2 className="mb-4 text-2xl font-bold md:mb-6 md:text-3xl text-slate-800">Interactive Reference Database</h2>
       <div className="relative mb-6">
         <Search className="absolute text-slate-400 left-3 top-3" size={20} />
         <input type="text" placeholder="Search authors, journals, or topics..." value={q} onChange={e => setQ(e.target.value)}
           className="w-full py-3 pl-10 pr-4 border rounded-lg border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500" />
       </div>
-      <div className="flex-grow overflow-y-auto bg-white border shadow-sm rounded-xl">
-        <table className="w-full text-left">
+      <div className="flex-grow overflow-auto bg-white border shadow-sm rounded-xl">
+        <table className="w-full min-w-[480px] text-left">
           <thead className="sticky top-0 border-b bg-slate-50">
             <tr>{['Source / Title', 'Type', 'Year'].map(h => <th key={h} className="p-4 font-semibold text-slate-600">{h}</th>)}</tr>
           </thead>
           <tbody className="divide-y">
             {list.map(r => (
               <tr key={r.id} className="hover:bg-slate-50">
-                <td className="p-4 font-medium text-slate-800">{r.title}</td>
+                <td className="p-3 font-medium md:p-4 text-slate-800">{r.title}</td>
                 <td className="p-4"><span className="px-3 py-1 text-xs font-medium rounded-full bg-slate-100 text-slate-600">{r.type}</span></td>
                 <td className="p-4 text-slate-600">{r.date}</td>
               </tr>
@@ -453,6 +453,8 @@ const ReferencesSlide = () => {
 /* =====================  APP  ===================== */
 export default function App() {
   const [cur, setCur] = useState(0);
+  const [menu, setMenu] = useState(false);
+  const [tx, setTx] = useState<number | null>(null);
   const next = () => setCur(c => Math.min(c + 1, slides.length - 1));
   const prev = () => setCur(c => Math.max(c - 1, 0));
   const categories = [...new Set(slides.map(s => s.category))];
@@ -472,17 +474,19 @@ export default function App() {
   };
 
   return (
-    <div className="flex h-screen overflow-hidden font-sans bg-slate-50 text-slate-900">
-      <div className="z-10 flex flex-col flex-shrink-0 w-64 shadow-xl bg-slate-900 text-slate-300">
-        <div className="p-6 border-b border-slate-800">
+    <div className="flex h-[100dvh] overflow-hidden font-sans bg-slate-50 text-slate-900">
+      {menu && <div className="fixed inset-0 z-20 bg-black/50 md:hidden" onClick={() => setMenu(false)} />}
+      <div className={`fixed inset-y-0 left-0 z-30 flex flex-col w-64 shadow-xl transition-transform duration-200 bg-slate-900 text-slate-300 md:static md:translate-x-0 md:flex-shrink-0 ${menu ? 'translate-x-0' : '-translate-x-full'}`}>
+        <div className="flex items-center justify-between p-6 border-b border-slate-800">
           <div className="flex items-center gap-2 text-lg font-bold text-white"><Activity className="text-blue-500" /> EPI-DASH</div>
+          <button className="md:hidden" aria-label="Close menu" onClick={() => setMenu(false)}><X size={20} /></button>
         </div>
         <div className="flex-grow py-4 overflow-y-auto">
           {categories.map(cat => (
             <div key={cat} className="mb-4">
               <div className="px-6 mb-2 text-xs font-bold tracking-wider uppercase text-slate-500">{cat}</div>
               {slides.map((s, i) => s.category === cat && (
-                <button key={s.id} onClick={() => setCur(i)}
+                <button key={s.id} onClick={() => { setCur(i); setMenu(false); }}
                   className={`w-full text-left px-6 py-2 text-sm transition-colors border-l-4 ${cur === i ? 'bg-blue-600 text-white font-medium border-blue-400' : 'hover:bg-slate-800 border-transparent'}`}>
                   {s.title || 'Title Slide'}
                 </button>
@@ -494,19 +498,26 @@ export default function App() {
       </div>
 
       <div className="flex flex-col flex-grow min-w-0">
-        <div className="flex-grow p-8 overflow-hidden md:p-12">
+        <div className="flex items-center gap-3 p-3 bg-white border-b md:hidden">
+          <button aria-label="Open menu" onClick={() => setMenu(true)}><Menu size={24} /></button>
+          <span className="font-bold truncate text-slate-800">{slides[cur].title || 'Epidemiology of Waterborne Diseases'}</span>
+        </div>
+        <div className="flex-grow min-h-0 p-4 overflow-hidden md:p-12"
+          onTouchStart={e => setTx(e.touches[0].clientX)}
+          onTouchEnd={e => { if (tx !== null) { const dx = e.changedTouches[0].clientX - tx; if (Math.abs(dx) > 80) (dx < 0 ? next : prev)(); } setTx(null); }}>
           <div className="w-full h-full max-w-6xl mx-auto">{renderSlide()}</div>
         </div>
         <div className="flex items-center justify-between flex-shrink-0 p-4 bg-white border-t">
           <button onClick={prev} disabled={cur === 0}
-            className="flex items-center gap-2 px-6 py-2 font-medium transition-colors rounded-lg text-slate-700 hover:bg-slate-100 disabled:opacity-50 disabled:cursor-not-allowed">
+            className="flex items-center gap-1 px-3 md:px-6 py-2 font-medium transition-colors rounded-lg text-slate-700 hover:bg-slate-100 disabled:opacity-50 disabled:cursor-not-allowed">
             <ChevronLeft size={20} /> Previous
           </button>
-          <div className="flex gap-1">
+          <span className="text-sm md:hidden text-slate-500">{cur + 1} / {slides.length}</span>
+          <div className="hidden gap-1 md:flex">
             {slides.map((_, i) => <div key={i} className={`h-1.5 rounded-full transition-all ${i === cur ? 'w-6 bg-blue-600' : 'w-2 bg-slate-200'}`} />)}
           </div>
           <button onClick={next} disabled={cur === slides.length - 1}
-            className="flex items-center gap-2 px-6 py-2 font-medium text-white transition-colors bg-blue-600 rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed">
+            className="flex items-center gap-1 px-3 md:px-6 py-2 font-medium text-white transition-colors bg-blue-600 rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed">
             Next <ChevronRight size={20} />
           </button>
         </div>
