@@ -74,7 +74,7 @@ const d = (stat: string, label: string, desc: string) => ({ stat, label, desc })
 
 const slides: any[] = [
   { type: 'title', category: 'Overview' },
-  { type: 'header', category: 'Overview', title: 'The Global Burden', subtitle: 'Analyzing the 2021-2025 Cholera Upsurge.', Icon: Activity },
+  { type: 'header', category: 'Overview', title: 'The Global Burden', subtitle: 'Analyzing the 2021-2026 Cholera Upsurge.', Icon: Activity },
   { type: 'data', category: 'Global Data', title: 'Global Cholera Snapshot (2025)',
     alert: 'CFR above 1% signals people are not reaching treatment in time.',
     content: [
@@ -267,7 +267,7 @@ const TitleSlide = () => {
     <div className="flex flex-col items-center justify-center h-full px-2 py-4 overflow-y-auto text-center md:px-8">
       <div className="p-4 mb-4 text-blue-700 bg-blue-100 rounded-full md:p-6 md:mb-6"><Droplets className="w-10 h-10 md:w-16 md:h-16" /></div>
       <h1 className="mb-4 text-3xl font-bold md:mb-6 md:text-5xl text-slate-800">Epidemiology of Waterborne Diseases</h1>
-      <h2 className="mb-6 text-lg md:mb-8 md:text-2xl text-slate-600">Global Burden, Zoonotic Spillovers, and the Pakistan Post-Flood Reality</h2>
+      <h2 className="mb-6 text-lg md:mb-8 md:text-2xl text-slate-600">Rameez Sarwar, Faiz Fareed,M Usama, Uswa Maryam, Aqsa Naz</h2>
       <span className="px-4 py-2 text-sm font-medium rounded-full bg-slate-100 text-slate-600">Human & Veterinary Overview</span>
       <button onClick={run} disabled={busy}
         className="inline-flex items-center gap-2 px-6 py-3 mt-8 text-white transition-colors bg-blue-600 rounded-lg hover:bg-blue-700 disabled:opacity-60">
