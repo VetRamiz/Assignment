@@ -299,47 +299,7 @@ const slides: any[] = [
       'Many diseases straddle classes. Shigellosis and cholera can be both waterborne and water-washed, because handwashing, which depends on water quantity, also breaks person-to-person spread.',
       'After floods all four classes surge together, which is why the Pakistan post-flood chart later in this deck mixes diarrhoea, skin and eye infections, malaria and typhoid.'
     ] },
-  { type: 'figure', category: 'Definitions', title: 'Faecal-Oral Transmission: The Five Fs',
-    description: 'How pathogens travel from faeces to a new host, and where barriers can stop them.',
-    image: 'faecalOral',
-    detail: [
-      'Fluids: faeces-contaminated drinking water, ponds, canals and floodwater (cholera, typhoid, hepatitis E).',
-      'Fields: soil and crops irrigated with untreated wastewater or fertilised with raw manure (helminths, Salmonella).',
-      'Flies: insects carry pathogens from faeces to food and utensils (Shigella, Salmonella).',
-      'Fingers: unwashed hands pass pathogens directly to mouths and food, the main route for Shigella.',
-      'Food: raw or undercooked food, unpasteurised milk and food washed in unsafe water (Campylobacter, Salmonella).',
-      'Sanitation is the primary barrier because it keeps faeces out of the environment; safe water, handwashing, food hygiene and fly control are secondary barriers.'
-    ] },
-  { type: 'terms', category: 'Definitions', title: 'Epidemiology Vocabulary',
-    intro: 'Terms used to describe how much disease there is, and how it behaves in a population.',
-    items: [
-      { term: 'Incidence', Icon: TrendingUp, def: 'The number of new cases in a defined population over a set period. It measures how fast a disease is spreading.', ex: '451,499 cholera cases reported worldwide in 2025.' },
-      { term: 'Prevalence', Icon: Users, def: 'The share of a population that has the disease at a given moment, counting both new and existing cases.', ex: 'If 20 of 100 sampled buffalo carry liver fluke, herd prevalence is 20%.' },
-      { term: 'Outbreak / epidemic', Icon: AlertTriangle, def: 'A sudden rise in cases above what is normally expected in a place or group. Epidemic is used when the rise spreads across a wider area or population.', ex: 'Hepatitis E outbreaks after flood displacement.' },
-      { term: 'Endemic', Icon: Map, def: 'A disease that is constantly present at a predictable baseline level in a region, with seasonal peaks rather than sudden surprises.', ex: 'XDR typhoid in urban centres of Pakistan.' },
-      { term: 'Pandemic', Icon: Globe, def: 'An epidemic that has spread across many countries and continents.', ex: 'The seventh cholera pandemic, ongoing since 1961.' },
-      { term: 'Case fatality rate (CFR)', Icon: Skull, def: 'Deaths among reported cases divided by the number of cases, as a percentage. It describes how dangerous the disease is once someone is infected, and falls when treatment is fast.', ex: '2025: 7,870 deaths ÷ 451,499 cases is about 1.7%.' }
-    ],
-    detail: [
-      'Always check the denominator. Incidence and prevalence need a population base; raw counts alone cannot compare countries of different sizes.',
-      'CFR depends on who is counted. If mild cases are missed, CFR is inflated; if deaths are missed, it is deflated. This is why a cholera CFR above 1% is read as a service-access signal rather than a simple number.',
-      'Mortality rate (deaths per 100,000 people) answers a different question from CFR (deaths per 100 cases): one measures risk to the community, the other measures severity once infected.'
-    ] },
-  { type: 'terms', category: 'Definitions', title: 'Clinical & Microbiology Terms',
-    intro: 'The clinical language behind waterborne infections and their treatment.',
-    items: [
-      { term: 'Dehydration and ORS', Icon: Droplets, def: 'Dehydration is the loss of body water and salts, the main killer in acute diarrhoea. Oral rehydration salts (ORS), a mixture of clean water, salt and sugar, replace what is lost.', ex: 'Severe cholera can kill within hours without rehydration.' },
-      { term: 'Dysentery', Icon: Stethoscope, def: 'Diarrhoea with visible blood, a sign that the infection is invading the lining of the intestine.', ex: 'Shigellosis, amoebiasis.' },
-      { term: 'Incubation period', Icon: TrendingUp, def: 'The time between exposure to the pathogen and the first symptoms. Short incubation periods give fast, explosive outbreaks.', ex: 'Cholera: hours to a few days. Typhoid: roughly 1 to 4 weeks.' },
-      { term: 'Infectious dose', Icon: Bug, def: 'The number of organisms needed to cause infection. Pathogens with a very low dose spread easily from person to person, not only through water.', ex: 'Shigella: about 10 to 100 organisms.' },
-      { term: 'Antimicrobial resistance (AMR)', Icon: ShieldCheck, def: 'The ability of microbes to survive drugs that once killed them, making infections harder, slower and costlier to treat.', ex: 'Rising resistance in Shigella and Salmonella.' },
-      { term: 'MDR vs XDR typhoid', Icon: Microscope, def: 'MDR typhoid resists chloramphenicol, ampicillin and co-trimoxazole. XDR typhoid also resists fluoroquinolones and third-generation cephalosporins.', ex: 'XDR S. Typhi was first described in Pakistan in 2016.' }
-    ],
-    detail: [
-      'Cholera treatment is simple and cheap (ORS for most patients, intravenous fluids for severe cases), so deaths are mainly a failure of access and speed rather than of medicine.',
-      'AMR is a waterborne issue too: wastewater and contaminated water carry resistant bacteria and resistance genes between people, animals and the environment.',
-      'Incubation period and infectious dose shape outbreak patterns: short incubation and a low dose together produce fast-moving outbreaks that are hard to contain by water treatment alone.'
-    ] },
+  
   { type: 'terms', category: 'Definitions', title: 'WASH & Public-Health Terms',
     intro: 'The vocabulary used in global water, sanitation and hygiene monitoring.',
     items: [
