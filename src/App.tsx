@@ -281,11 +281,7 @@ const slides: any[] = [
       { term: 'Diarrhoeal disease', Icon: Stethoscope, def: 'Defined by WHO as passing three or more loose or liquid stools in a day. It is the main clinical expression of most waterborne infections, and the danger is dehydration.', ex: 'Acute watery diarrhoea (cholera); dysentery (Shigella).' },
       { term: 'Microbial contamination', Icon: Microscope, def: 'The presence of disease-causing organisms in water, as opposed to chemical contamination. Safety is checked with an indicator organism: E. coli should not be detectable in any 100 mL sample of drinking water.', ex: 'Faecal indicator bacteria in a village well.' }
     ],
-    detail: [
-      'Waterborne diseases are infectious, so they can cause outbreaks. This separates them from chemical hazards such as arsenic or fluoride, which harm through long-term exposure rather than infection.',
-      'Water is usually a passive carrier: the pathogen only needs to survive in it long enough to be swallowed. Vibrio cholerae is a notable exception that can persist in aquatic environments.',
-      'The scope of this deck is microbial: bacteria (Vibrio, Salmonella, Shigella, Campylobacter, Leptospira), viruses (hepatitis E), protozoa (Giardia, Cryptosporidium) and helminths (Fasciola).'
-    ] },
+     },
   { type: 'terms', category: 'Definitions', title: 'Water-Related Diseases: Four Classes',
     intro: 'The Bradley classification groups water-related disease by how water is involved in transmission.',
     items: [
@@ -294,11 +290,7 @@ const slides: any[] = [
       { term: 'Water-based', img: 'iconBased', def: 'The pathogen spends part of its life cycle in an aquatic host such as a snail, and people or livestock are infected by drinking, wading or eating water plants.', ex: 'Schistosomiasis, guinea worm, fascioliasis.' },
       { term: 'Water-related insect vector', img: 'iconVector', def: 'Insects that breed in or bite near water carry the pathogen. People need not drink the water at all. Control targets breeding sites and bites.', ex: 'Malaria, dengue, lymphatic filariasis.' }
     ],
-    detail: [
-      'Each class points to a different control lever: water quality (waterborne), water quantity (water-washed), snail and habitat control (water-based) and vector control (insect vectors).',
-      'Many diseases straddle classes. Shigellosis and cholera can be both waterborne and water-washed, because handwashing, which depends on water quantity, also breaks person-to-person spread.',
-      'After floods all four classes surge together, which is why the Pakistan post-flood chart later in this deck mixes diarrhoea, skin and eye infections, malaria and typhoid.'
-    ] },
+    },
   
   { type: 'terms', category: 'Definitions', title: 'WASH & Public-Health Terms',
     intro: 'The vocabulary used in global water, sanitation and hygiene monitoring.',
@@ -310,11 +302,7 @@ const slides: any[] = [
       { term: 'DALY', Icon: TrendingUp, def: 'Disability-adjusted life year: one lost year of healthy life, adding years lived with illness to years lost through early death.', ex: '74 million DALYs attributed to unsafe WASH in 2019.' },
       { term: 'JMP and SDG 6', Icon: Globe, def: 'The WHO/UNICEF Joint Monitoring Programme tracks progress on SDG targets 6.1 (safe drinking water) and 6.2 (sanitation and hygiene), the source of the global snapshot slides.', ex: 'JMP 2025 report, covering data to 2024.' }
     ],
-    detail: [
-      'WASH is treated as a package because one part without the others underperforms: safe water without sanitation is soon recontaminated, and sanitation without handwashing leaves the hands route open.',
-      'The JMP service ladder ranks drinking water (safely managed, basic, limited, unimproved, surface water) and sanitation (safely managed, basic, limited, unimproved, open defecation). The global snapshot chart uses exactly these rungs.',
-      'Improved does not mean safe. An improved source can still be contaminated, which is why testing and the safely managed criteria matter.'
-    ] },
+     },
   
   { type: 'header', category: 'Overview', title: 'The Global Burden', subtitle: 'Analyzing the 2021-2025 Cholera Upsurge.',
     blurb: 'Waterborne disease is not one problem but many, all sharing the same root: faecal contamination of the water that people and their animals depend on. We first look at the global picture of safe water and diarrhoeal disease, then narrow to cholera, the sharpest indicator of failing water systems.', Icon: Activity },
