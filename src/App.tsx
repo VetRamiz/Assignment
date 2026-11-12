@@ -328,12 +328,7 @@ const slides: any[] = [
       d('3.4 billion', 'Without Safe Sanitation', 'People lacking safely managed sanitation in 2024, including 354 million who still practise open defecation.'),
       d('1.7 billion', 'Without Basic Hygiene', 'People lacking basic handwashing facilities at home in 2024; 611 million have no facility at all.'),
       d('1.4 million', 'Preventable Deaths a Year', 'Deaths attributable to unsafe water, sanitation and hygiene in 2019 (WHO), over one million of them from diarrhoea.')],
-    detail: [
-      'Safely managed means water on premises, available when needed and free from contamination. Anything lower on the service ladder still carries some risk.',
-      'The 2.1 billion are not all equal: about 1.4 billion use a basic service, while 106 million drink directly from rivers, ponds or canals (see the breakdown chart that follows).',
-      'People in least developed countries are more than twice as likely to lack basic drinking water and sanitation as people elsewhere, and in fragile settings safely managed water coverage is 38 percentage points lower.',
-      'Rural coverage of safely managed drinking water rose from 50% to 60% between 2015 and 2024, while urban coverage has stagnated, so cities cannot be assumed to be safe.'
-    ] },
+     },
   { type: 'data', category: 'Global Data', title: 'Global Waterborne Disease Burden',
     alert: 'Diarrhoea is both preventable and treatable: safe WASH prevents it, and oral rehydration salts with zinc treat most cases.',
     content: [
@@ -417,12 +412,7 @@ const slides: any[] = [
       d('Cryptosporidium', 'Calf Diarrhea', 'High morbidity in calf rearing; resistant to standard chlorination.'),
       d('Campylobacter', 'Enteric Runoff', 'Spread through agricultural runoff; major cause of human gastroenteritis.')] },
   { type: 'data', category: 'Veterinary', title: 'Herd-Level Epidemiology: Key Concepts',
-    detail: [
-      'A point-source outbreak (one contaminated trough) produces a sharp, steep epidemic curve with many animals falling ill within one incubation period; a propagated outbreak (animal-to-animal spread) produces repeated waves.',
-      'Herd prevalence counts the proportion of animals or pens infected. Sampling by pen and age group matters because calves are usually the amplifiers that shed the most pathogen.',
-      'Subclinical losses are often the largest economic cost: reduced feed conversion and milk yield may be the only sign, and they are rarely linked to water quality.',
-      'Biosecurity levers are cheap relative to treatment: separate calf water, scheduled trough cleaning, fencing and draining ponds all reduce exposure.'
-    ],
+   
     content: [
       d('Point source', 'Common Trough', 'One contaminated water source produces a sharp, herd-wide epidemic curve.'),
       d('Herd prevalence', 'Beyond Individuals', 'Sample by pen and age group; calves are the usual amplifiers.'),
@@ -447,12 +437,7 @@ const slides: any[] = [
       d('Endemic', 'XDR Typhoid', 'Complicates empirical therapy in urban centres.'),
       d('One Health', 'Missing Link', 'No integrated human-veterinary surveillance; spillovers go untracked.')] },
   { type: 'data', category: 'Pakistan', title: 'Veterinary Impact in Punjab & Sindh',
-    detail: [
-      'Commercial dairies can hold over a thousand head on communal water, so a single contaminated source can expose an entire herd at once.',
-      'Fasciola: snails multiply in stagnant post-monsoon water, and infected cattle and buffalo show liver damage, lower weight gain and reduced milk output.',
-      'Mastitis: environmental pathogens such as coliforms reach the udder through mud and wet bedding, leading to poorer milk quality, discarded milk and treatment costs.',
-      'Rural households often depend on the same animals for income and food, so herd disease quickly becomes household food insecurity as well as a public-health issue.'
-    ],
+    
     alert: 'Livestock health is inextricably linked to human public health in rural tehsils.',
     content: [
       d('Fasciola', 'Large Ruminants', 'Snail proliferation in post-monsoon stagnant water damages livers of cattle and buffaloes.'),
@@ -460,12 +445,7 @@ const slides: any[] = [
       d('Milk Yield Drop', 'Economic Loss', 'Enteric disease reduces nutrient absorption and milk output.'),
       d('Mastitis', 'Environmental Pathogens', 'Contaminated mud and water expose udders to coliforms.')] },
   { type: 'chart', chart: 'pakFlood', category: 'Pakistan', title: 'Post-Flood Human Disease Prevalence',
-    detail: [
-      'Malaria leads at 44% of presentations even though it is not waterborne: it is a water-related insect-vector disease, because floodwater pools create mosquito breeding sites.',
-      'Diarrhoea (17%), skin infections (11%) and eye infections (8%) are mostly waterborne or water-washed, reflecting both contaminated water and too little water for washing.',
-      'Typhoid (XDR) at 5% is the smallest bar but the hardest to treat: resistance, not volume, drives its clinical weight.',
-      'The five categories add up to 85%, so roughly 15% of presentations were other conditions. Treat the percentages as clinic-reported shares, not population prevalence.'
-    ],
+    
     description: 'Proportional breakdown of clinical presentations in flood-affected districts.' },
 
   // Surveillance & prevention
@@ -473,12 +453,7 @@ const slides: any[] = [
     blurb: 'Waiting for patients to reach clinics means detecting outbreaks late. Molecular tools move detection earlier: wastewater testing samples a whole community at once, and genomics shows which strains are related and how they travel.', Icon: Search },
   { type: 'data', category: 'Surveillance', title: 'Wastewater Surveillance (WWS)',
     image: 'wastewater',
-    detail: [
-      'Wastewater captures everyone connected to a sewer, including people with mild or no symptoms, so it works as an early-warning signal that can precede hospital admissions by about a week.',
-      'Samples are collected at treatment-plant inlets or pumping stations, concentrated, and tested by PCR (for known targets) and sequencing (for strain identity).',
-      'Limits: coverage is restricted to sewered areas, so informal settlements and rural areas are often missed, and results show presence and trend rather than individual cases.',
-      'The best use is as a complement to clinical surveillance, not a replacement for it.'
-    ],
+    
     content: [
       d('1 Week', 'Lead Time', 'Detects pathogen spikes before clinical hospitalizations.'),
       d('90%+', 'Viral Detection', 'Detects shedding even from asymptomatic carriers.'),
@@ -500,12 +475,7 @@ const slides: any[] = [
       d('WASH', 'Sustainable Solution', 'Infrastructure is the only permanent fix.')] },
   { type: 'data', category: 'Prevention', title: 'One Health Control Toolkit',
     image: 'waterBarriers',
-    detail: [
-      'Multi-barrier thinking: no single measure is perfect, so each layer catches what the previous layer missed.',
-      'For humans: ORS and zinc for diarrhoea, OCV and TCV in targeted populations, safe water storage, handwashing with soap and case isolation during outbreaks.',
-      'For livestock: leptospirosis vaccination where available, strategic deworming for flukes, regularly cleaned troughs and separate calf water.',
-      'For the environment and surveillance: fence ponds, drain stagnant water, manage manure so it does not reach drinking-water sources, and share data between public-health and veterinary services.'
-    ],
+   
     content: [
       d('Human', 'Clinical + WASH', 'ORS, vaccines (OCV, TCV), safe water, handwashing, case isolation.'),
       d('Livestock', 'Herd Management', 'Vaccination (e.g. leptospirosis), strategic deworming, clean troughs, calf hygiene.'),
@@ -514,52 +484,23 @@ const slides: any[] = [
 
   // Pathogen deep dives
   { type: 'data', category: 'Pathogens', title: 'Deep Dive: Typhoid Fever',
-    detail: [
-      'Typhoid (enteric) fever is a systemic infection: sustained fever, headache and abdominal pain, with bacteria entering the bloodstream rather than staying in the gut.',
-      'Humans are the only natural host, so transmission depends on faecal contamination of water or food by a case or a chronic carrier.',
-      'XDR means resistance to chloramphenicol, ampicillin, co-trimoxazole, fluoroquinolones and third-generation cephalosporins, which narrows treatment to options such as azithromycin or carbapenems.',
-      'Typhoid conjugate vaccine (TCV) offers longer and more reliable protection than older vaccines and is recommended by WHO for endemic settings.'
-    ],
+   
     content: [d('S. Typhi', 'Agent', 'Systemic infection.'), d('11-20M', 'Cases', 'Annual estimates.'), d('XDR', 'Resistance', 'Fluoroquinolone and cephalosporin resistance.'), d('TCV', 'Vaccine', 'Conjugate vaccine highly effective.')] },
   { type: 'data', category: 'Pathogens', title: 'Deep Dive: Hepatitis E',
-    detail: [
-      'Hepatitis E virus has four main genotypes that infect humans: HEV-1 and HEV-2 spread among people through contaminated water, while HEV-3 and HEV-4 are zoonotic, linked to swine and other animals and to undercooked meat.',
-      'WHO estimates about 20 million infections a year, 3.3 million symptomatic cases and roughly 44,000 deaths (2015 estimate).',
-      'Most infections resolve on their own, but pregnant women, especially in the third trimester, are at risk of fulminant liver failure, and flood-related displacement is a classic trigger for outbreaks.',
-      'A vaccine exists but is licensed in only a few countries, so control still relies on safe water, sanitation and meat hygiene.'
-    ],
+    
     content: [d('Viral', 'Classification', 'Faecal-oral transmission.'), d('20%', 'Pregnancy CFR', 'High risk in 3rd trimester.'), d('Outbreaks', 'Post-Flood', 'Common after displacement.'), d('Zoonotic', 'Reservoirs', 'Swine and other domestic animals.')] },
   { type: 'data', category: 'Pathogens', title: 'Deep Dive: Shigellosis',
-    detail: [
-      'Shigella causes dysentery: bloody diarrhoea with fever and cramping, because the bacteria invade the lining of the colon. Shigella dysenteriae type 1 can also produce Shiga toxin and severe complications.',
-      'An infectious dose of 10 to 100 organisms means spread by hands, flies and food, not only water, so handwashing and sanitation matter as much as water treatment.',
-      'Children under five bear most severe disease, and malnourished children are most at risk.',
-      'Resistance to commonly used antibiotics has been reported widely, narrowing options and making antibiotics a careful choice reserved for severe cases.'
-    ],
+    
     content: [d('Shigella', 'Agent', 'Contagious bacterial dysentery.'), d('10-100', 'Infectious Dose', 'Extremely low inoculum.'), d('<5 yrs', 'Vulnerability', 'Children disproportionately affected.'), d('AMR', 'Resistance', 'Increasing globally.')] },
   { type: 'data', category: 'Pathogens', title: 'Deep Dive: Giardiasis',
-    detail: [
-      'Giardia duodenalis has two life stages: a fragile trophozoite that lives in the small intestine and a hardy cyst that survives in the environment.',
-      'Cysts can persist for weeks to months in cold water and tolerate standard chlorine doses, so filtration or boiling is needed rather than chlorination alone.',
-      'Infection often causes greasy diarrhoea, bloating and weight loss, and in children chronic malabsorption can impair growth. Some infected people have no symptoms but keep shedding cysts.',
-      'Zoonotic potential varies by genetic assemblage: livestock and dogs can carry types that infect humans, although many human infections involve human-adapted types.'
-    ],
+    
     content: [d('G. duodenalis', 'Agent', 'Protozoan forming cysts.'), d('Chlorine', 'Resistance', 'Cysts survive standard chlorination.'), d('Zoonotic', 'Transmission', 'Humans and livestock cross-infect.'), d('Chronic', 'Impact', 'Malabsorption and weight loss.')] },
   { type: 'data', category: 'Climate', title: 'Climate Change Amplification',
     image: 'climateDrivers',
-    detail: [
-      'Warmer surface water extends the season and range in which Vibrio species grow, especially in brackish coastal water and nutrient-rich ponds.',
-      'Heavy rainfall and flooding overwhelm drains and latrines, mixing faeces into drinking-water sources.',
-      'Drought works differently: low flows concentrate pathogens, people turn to fewer and less protected sources, and water rationing cuts handwashing.',
-      'Both extremes also damage infrastructure, so recovery from one event can leave the system more vulnerable to the next.'
-    ],
+    
     content: [d('Warming', 'Pathogen Survival', 'Warmer water favours Vibrio.'), d('Flooding', 'Contamination', 'Flushes faecal matter into supplies.'), d('Drought', 'Stagnation', 'Concentrates pathogens in remaining sources.'), d('Extremes', 'Hydrometeorological', 'Strong drivers of diarrhoeal disease.')] },
   { type: 'data', category: 'Climate', title: 'Climate Forecasting',
-    detail: [
-      'Bangladesh is a useful case study: diarrhoea admissions in coastal areas peak in the hot months, linking weather directly to hospital load.',
-      'Projected shifts are not uniform. Bacterial causes are expected to rise while viral causes are expected to fall, which raises the stakes for antibiotic resistance and diagnostics.',
-      'Without adaptation, impacts multiply. Climate-resilient WASH (raised wells, flood-proof latrines, backup supplies) is cheaper than repeated outbreak response.'
-    ],
+   
     content: [d('Bangladesh', 'Coastal Peaks', 'Admissions peak in hot months.'), d('Bacterial', 'Projections', 'Diarrhoeal burden projected to rise.'), d('Viral', 'Projections', 'Viral etiology projected to fall.'), d('Adaptation', 'Urgency', 'Impacts multiply without adaptation.')] },
   { type: 'references', category: 'References' }
 ].map((s, i) => ({ ...s, id: i + 1 }));
