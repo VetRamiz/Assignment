@@ -315,21 +315,7 @@ const slides: any[] = [
       'The JMP service ladder ranks drinking water (safely managed, basic, limited, unimproved, surface water) and sanitation (safely managed, basic, limited, unimproved, open defecation). The global snapshot chart uses exactly these rungs.',
       'Improved does not mean safe. An improved source can still be contaminated, which is why testing and the safely managed criteria matter.'
     ] },
-  { type: 'terms', category: 'Definitions', title: 'One Health & Veterinary Terms',
-    intro: 'Concepts for reading the livestock and zoonotic slides.',
-    items: [
-      { term: 'One Health', Icon: Network, def: 'An integrated approach that links the health of people, animals and ecosystems, and brings the human, veterinary and environmental sectors together.', ex: 'Joint outbreak investigation by health and livestock departments.' },
-      { term: 'Zoonosis', Icon: Beef, def: 'An infection that can pass between animals and humans, directly or through the environment.', ex: 'Leptospirosis, cryptosporidiosis, Campylobacter.' },
-      { term: 'Reservoir host', Icon: Bug, def: 'The species or environment where a pathogen normally lives and multiplies, keeping it alive between outbreaks.', ex: 'Rodents, cattle and buffalo for Leptospira.' },
-      { term: 'Intermediate host', Icon: Waves, def: 'An organism in which a parasite must develop through a larval stage before it can infect its final host.', ex: 'Lymnaea snails for Fasciola.' },
-      { term: 'Subclinical infection', Icon: Stethoscope, def: 'Infection without obvious signs. The animal looks healthy but grows more slowly, gives less milk and can still shed pathogens.', ex: 'Reduced milk yield with no visible diarrhoea.' },
-      { term: 'Biosecurity', Icon: ShieldCheck, def: 'Farm routines that keep pathogens out and stop them spreading: clean water, quarantine, hygiene and manure management.', ex: 'Separate calf water, fenced ponds, cleaned troughs.' }
-    ],
-    detail: [
-      'One Health is operational, not just a slogan: it means joint outbreak investigation, shared laboratory capacity and shared reporting between public health and veterinary services.',
-      'Spillover describes a pathogen moving from animals to humans; spillback is the reverse. In shared water, both directions can occur at once.',
-      'Subclinical infections matter because animals that look healthy can still shed pathogens into shared water, so herd sampling cannot rely on visible disease.'
-    ] },
+  
   { type: 'header', category: 'Overview', title: 'The Global Burden', subtitle: 'Analyzing the 2021-2025 Cholera Upsurge.',
     blurb: 'Waterborne disease is not one problem but many, all sharing the same root: faecal contamination of the water that people and their animals depend on. We first look at the global picture of safe water and diarrhoeal disease, then narrow to cholera, the sharpest indicator of failing water systems.', Icon: Activity },
 
@@ -356,28 +342,16 @@ const slides: any[] = [
       d('395,000', 'Child Deaths Linked to WASH', 'Under-5 deaths attributable to unsafe WASH in 2019: 273,000 from diarrhoea and 112,000 from acute respiratory infections.'),
       d('69%', 'Diarrhoea Deaths from Unsafe WASH', 'Share of all diarrhoea deaths in 2019 attributed to unsafe water, sanitation and hygiene (WHO).')],
     detail: [
-      'The danger of diarrhoea is dehydration. In children each episode also worsens malnutrition, and malnourished children are more likely to fall ill with the next episode.',
+      
       'Among children under five the most common viral causes are rotavirus, norovirus, adenovirus and astrovirus; rotavirus and E. coli are common across all age groups, and parasites become more frequent at ages 3-5.',
-      'More than three-quarters of WASH-attributable deaths occur in the WHO African and South-East Asia regions, and 89% are in low- and lower-middle-income countries. Even in high-income countries about 18% of the diarrhoeal burden could be prevented with better hand hygiene.',
-      'Not every diarrhoea case is waterborne: food, person-to-person spread and poor hygiene also drive it, which is why WASH is addressed as one package.'
     ] },
-  { type: 'chart', chart: 'wash', category: 'Global Data', title: 'Inside the Headline Numbers (2024)',
+  { type: 'chart', chart: 'wash', category: 'Global Data', title: 'Inside the Headline Numbers (2026)',
     description: 'Where people sit on the service ladder when they lack safely managed drinking water or sanitation (millions of people).',
-    detail: [
-      'Drinking water: of the 2.1 billion without safely managed services, about 1.4 billion use basic services, 287 million limited services, 302 million unimproved sources and 106 million surface water.',
-      'Sanitation: of the 3.4 billion, about 1.9 billion have basic facilities, 560 million limited, 555 million unimproved and 354 million practise open defecation.',
-      'The largest group already has a basic service, meaning an improved source or toilet exists, but it may be off-premises, unreliable, untested or not safely emptied. This is why improved does not guarantee safe.',
-      'The last category combines surface water (drinking water series) and open defecation (sanitation series), the two most hazardous rungs of their ladders.'
-    ] },
+   },
 
   { type: 'data', category: 'Global Data', title: 'Global Cholera Snapshot (2025)',
     image: 'vibrio',
-    detail: [
-      'Cholera is an acute diarrhoeal infection caused by swallowing food or water contaminated with Vibrio cholerae. Most infections are mild or symptomless, but severe cases produce profuse watery diarrhoea and can kill within hours without rehydration.',
-      'Reported cases are only part of the burden: limited laboratory confirmation and weak surveillance mean the estimated 1.3M+ cases is the better planning figure. WHO’s long-standing range is 1.3 to 4.0 million cases and 21,000 to 143,000 deaths a year.',
-      'Using the figures above, the 2025 case fatality rate is roughly 1.7% (7,870 deaths ÷ 451,499 cases), against about 0.9% in 2024 (5,500 ÷ 600,000). That pattern is consistent with more patients reaching care late or not at all.',
-      'Reporting countries grew from 35 in 2021 to 47 in 2025, showing cholera expanding geographically, with conflict, displacement, floods and drought repeatedly cited as drivers.'
-    ],
+    
     alert: 'CFR above 1% signals people are not reaching treatment in time.',
     content: [
       d('451,499', 'Reported Cases', 'In 47 countries, up from 35 countries in 2021.'),
