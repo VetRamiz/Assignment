@@ -861,7 +861,7 @@ const TitleSlide = () => {
     <div className="flex flex-col items-center justify-center h-full px-2 py-4 overflow-y-auto text-center md:px-8">
       <div className="p-4 mb-4 text-blue-700 bg-blue-100 rounded-full md:p-6 md:mb-6"><Droplets className="w-10 h-10 md:w-16 md:h-16" /></div>
       <h1 className="mb-4 text-3xl font-bold md:mb-6 md:text-5xl text-slate-800">Epidemiology of Waterborne Diseases</h1>
-      <h2 className="mb-6 text-lg md:mb-8 md:text-2xl text-slate-600">Global Burden, Zoonotic Spillovers, and the Pakistan Post-Flood Reality</h2>
+      <h2 className="mb-6 text-lg md:mb-8 md:text-2xl text-slate-600">Rameez Sarwar, Faiz Fareed, M Usama, Uswa Maryam, Aqsa Naz</h2>
       <p className="max-w-3xl mb-6 text-sm md:text-base text-slate-500">{INTRO}</p>
       <span className="px-4 py-2 text-sm font-medium rounded-full bg-slate-100 text-slate-600">Human & Veterinary Overview</span>
       <button onClick={run} disabled={busy}
